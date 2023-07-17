@@ -1,6 +1,12 @@
 # TypeScript WebSocket Project
 
-This is a TypeScript WebSocket project that demonstrates how to create a WebSocket server and client using TypeScript. WebSocket enables bidirectional communication between the server and clients, making it ideal for real-time applications.
+This is a real-time chat application built with TypeScript and WebSocket, allowing users to communicate through direct messages, group messages, and channels. The application offers bidirectional communication between clients and the server, providing a seamless chat experience.
+
+## Features
+
+- **User-to-User Direct Messaging:** Users can send direct messages to each other privately.
+- **Group Messaging:** Users can participate in group conversations with multiple participants.
+- **Channels:** Users can join and send messages to public channels.
 
 ## Prerequisites
 
@@ -43,7 +49,17 @@ To start the WebSocket client, run the following command:
 npm run start:client
 ```
 
-The client will attempt to connect to the WebSocket server running on the specified host and port. You can adjust the server host and port in the src/client.ts file.
+The client will attempt to connect to the WebSocket server running on the specified host and port. You can adjust the server host and port in the `src/client.ts` file.
+
+## Chat Commands
+
+Once the WebSocket client is running, you can use the following commands:
+
+- `/login <username>`: Log in with your desired username to join the chat.
+- `/direct <username> <message>`: Send a direct message to another user using their username.
+- `/group <group_name> <message>`: Send a message to a specific group of users.
+- `/join <channel_name>`: Join a public chat channel to send and receive messages.
+- `/leave <channel_name>`: Leave a public chat channel.
 
 ### Handling WebSocket Events
 
