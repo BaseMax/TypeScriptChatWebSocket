@@ -61,6 +61,18 @@ Once the WebSocket client is running, you can use the following commands:
 - `/join <channel_name>`: Join a public chat channel to send and receive messages.
 - `/leave <channel_name>`: Leave a public chat channel.
 
+### Socket commands or maybe routes:
+
+ -`/api/login`: Handles user login. Expects a JSON payload with the username.
+- `/api/direct`: Sends a direct message. Expects a JSON payload with the recipient username and the message.
+- `/api/group`: Sends a message to a group. Expects a JSON payload with the group_name and the message.
+- `/api/channel/join`: Joins a public channel. Expects a JSON payload with the channel_name.
+- `/api/channel/leave`: Leaves a public channel. Expects a JSON payload with the channel_name.
+- `/api/channel/messages/:channel_name`: Retrieves the message history for a specific public channel.
+- `/api/user/:username/status`: Retrieves the status (online, offline, etc.) of a specific user.
+- `/api/user/:username/direct-messages`: Retrieves the direct message history between the logged-in user and another user (:username).
+- `/api/user/groups`: Retrieves a list of groups that the logged-in user belongs to.
+
 ### Handling WebSocket Events
 
 Both the WebSocket server and client have event handlers for the following events:
