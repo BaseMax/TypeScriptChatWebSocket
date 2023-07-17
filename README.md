@@ -65,9 +65,9 @@ Once the WebSocket client is running, you can use the following commands:
 
 Both the WebSocket server and client have event handlers for the following events:
 
-- open: Triggered when the WebSocket connection is successfully established.
-- message: Triggered when a message is received from the other party.
-- close: Triggered when the WebSocket connection is closed.
+- `open`: Triggered when the WebSocket connection is successfully established.
+- `message`: Triggered when a message is received from the other party.
+- `close`: Triggered when the WebSocket connection is closed.
 
 You can customize the behavior of these event handlers in the respective src/server.ts and src/client.ts files.
 
@@ -75,12 +75,12 @@ You can customize the behavior of these event handlers in the respective src/ser
 
 You can modify the WebSocket server settings in the src/server.ts file:
 
-- PORT: The port on which the WebSocket server will listen for incoming connections.
+- `PORT`: The port on which the WebSocket server will listen for incoming connections.
 
 You can adjust the WebSocket client settings in the src/client.ts file:
 
-- SERVER_HOST: The hostname or IP address of the WebSocket server.
-- SERVER_PORT: The port on which the WebSocket server is running.
+- `SERVER_HOST`: The hostname or IP address of the WebSocket server.
+- `SERVER_PORT`: The port on which the WebSocket server is running.
 
 ## Contributing
 
