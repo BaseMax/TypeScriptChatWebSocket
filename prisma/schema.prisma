@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int        @id @default(autoincrement())
+  username      String     @unique
+  status        UserStatus @default(offilne)
+  senderchats   Chat[]     @relation(name: "sender")
+  receiverChats Chat[]     @relation(name: "receiver")
+  messages      Message[]
+  groups        Group[]
+  channels      Channel[]
+  createdAt     DateTime   @default(now())
+}
+
+enum UserStatus {
+  online
+  offilne
+}
+
+model Channel {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  messages Message[]
+  users    User[]
+
+  createdAt DateTime @default(now())
+}
+
+model Chat {
+  id         Int       @id @default(autoincrement())
+  sender     User      @relation(name: "sender", fields: [senderId], references: [id])
+  receiver   User      @relation(name: "receiver", fields: [receiverId], references: [id])
+  receiverId Int
+  messages   Message[]
+  createdAt  DateTime  @default(now())
+  senderId     Int
+}
+
+model Group {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  user     User[]
+  messages Message[]
+
+  createdAt DateTime @default(now())
+}
+
+model Message {
+  id        Int         @id @default(autoincrement())
+  message   String
+  type      messageType
+  User      User?       @relation(fields: [userId], references: [id])
+  userId    Int?
+  Channel   Channel?    @relation(fields: [channelId], references: [id])
+  channelId Int?
+  Group     Group?      @relation(fields: [groupId], references: [id])
+  groupId   Int?
+  Chat      Chat?       @relation(fields: [chatId], references: [id])
+  chatId    Int?
+
+  createdAt DateTime @default(now())
+}
+
+enum messageType {
+  Channel
+  Group
+  Chat
+}

@@ -33,6 +33,7 @@ npm install
 
 ### Starting the WebSocket Server
 
+
 To start the WebSocket server, run the following command:
 
 ```bash
@@ -44,6 +45,10 @@ This will launch the server and bind it to a specified port (default is 8080). T
 ### Starting the WebSocket Client
 
 To start the WebSocket client, run the following command:
+
+```bash
+cd client
+```
 
 ```bash
 npm run start:client
@@ -68,9 +73,9 @@ Once the WebSocket client is running, you can use the following commands:
 - `/api/group`: Sends a message to a group. Expects a JSON payload with the group_name and the message.
 - `/api/channel/join`: Joins a public channel. Expects a JSON payload with the channel_name.
 - `/api/channel/leave`: Leaves a public channel. Expects a JSON payload with the channel_name.
-- `/api/channel/messages/:channel_name`: Retrieves the message history for a specific public channel.
-- `/api/user/:username/status`: Retrieves the status (online, offline, etc.) of a specific user.
-- `/api/user/:username/direct-messages`: Retrieves the direct message history between the logged-in user and another user (:username).
+- `/api/channel/messages`: Retrieves the message history for a specific public channel.Expects a JSON payload with the channel_name.
+- `/api/user/status`: Retrieves the status (online, offline, etc.) of a specific user. Expects a JSON payload with the username.
+- `/api/user/direct-messages`: Retrieves the direct message history between the logged-in user and another user (:username).
 - `/api/user/groups`: Retrieves a list of groups that the logged-in user belongs to.
 
 ### Handling WebSocket Events
