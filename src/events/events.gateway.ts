@@ -15,7 +15,7 @@ import { DirectService } from '../direct/direct.service';
 import { GroupService } from '../group/group.service';
 import { ChannelService } from '../channel/channel.service';
 
-@WebSocketGateway(8080)
+@WebSocketGateway(+process.env.PORT)
 @UseFilters(new WebsocketExceptionsFilter())
 export class EventsGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer()
