@@ -8,6 +8,21 @@ This is a real-time chat application built with TypeScript and WebSocket, allowi
 - **Group Messaging:** Users can participate in group conversations with multiple participants.
 - **Channels:** Users can join and send messages to public channels.
 
+## Screenshots
+#### start server
+![graphql](https://raw.githubusercontent.com/BaseMax/TypeScriptChatWebSocket/main/screenshots/Screenshot%20from%202023-07-29%2011-37-30.png)
+#### login user
+![graphql](https://raw.githubusercontent.com/BaseMax/TypeScriptChatWebSocket/main/screenshots/Screenshot%20from%202023-07-29%2011-45-54.png)
+#### send direct messages
+![graphql](https://raw.githubusercontent.com/BaseMax/TypeScriptChatWebSocket/main/screenshots/Screenshot%20from%202023-07-29%2011-40-00.png)
+#### send group messages
+![graphql](https://raw.githubusercontent.com/BaseMax/TypeScriptChatWebSocket/main/screenshots/Screenshot%20from%202023-07-29%2011-44-04.png)
+#### join and leave public channel
+![graphql](https://raw.githubusercontent.com/BaseMax/TypeScriptChatWebSocket/main/screenshots/Screenshot%20from%202023-07-29%2011-47-46.png)
+#### retrieves user status (onilne, offline)
+![graphql](https://raw.githubusercontent.com/BaseMax/TypeScriptChatWebSocket/main/screenshots/Screenshot%20from%202023-07-29%2011-51-29.png)
+#### retrieves user direct messages
+![graphql](https://raw.githubusercontent.com/BaseMax/TypeScriptChatWebSocket/main/screenshots/Screenshot%20from%202023-07-29%2011-51-58.png)
 ## Prerequisites
 
 Before running this project, ensure you have the following prerequisites installed on your system:
