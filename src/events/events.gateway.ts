@@ -54,7 +54,7 @@ export class EventsGateway implements OnGatewayConnection, OnGatewayDisconnect {
     this.clients.set(client, user.username);
     this.clientsId.set(user.id, client);
 
-    await this.userService.offlineUser(user.username);
+    await this.userService.onlineUser(user.username);
 
     return { event: 'login', data: { username: user.username } };
   }

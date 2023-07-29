@@ -15,5 +15,6 @@ async function bootstrap() {
   );
 
   await app.listen(4000);
+  console.log(`websocket server running in prot: ${process.env.PORT}`);
 }
 bootstrap();
